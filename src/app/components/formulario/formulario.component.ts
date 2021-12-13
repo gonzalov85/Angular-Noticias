@@ -36,8 +36,11 @@ export class FormularioComponent implements OnInit {
   }
 
   buscarNoticia(){
-    console.log(this.categoriaSeleccionada);
-    console.log(this.paisSeleccionado);
+    const PARAMETROS = {
+      categoria: this.categoriaSeleccionada,
+      pais: this.paisSeleccionado
+    }
+    this.parametrosSeleccionados.emit(PARAMETROS);
   }
 
 }
